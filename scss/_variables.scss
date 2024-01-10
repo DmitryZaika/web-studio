@@ -1,0 +1,17 @@
+:root {
+  --color-brand: #2196f3;
+  --color-brand-transparent: rgba(33, 150, 243, 0.9);
+  --color-text-secondary: #fff;
+  --color-main-text: #212121;
+  --color-secondary: #f5f4fa;
+  --color-background-dark: #757575;
+  --color-icons: #afb1b8;
+  --color-footer: #2f303a;
+  --color-header-border: #ececec;
+  --color-portfolio-border: #eeeeee;
+  --color-button-close-background: rgba(0, 0, 0, 0.1);
+}
+
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop: 1200px;

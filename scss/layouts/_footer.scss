@@ -1,0 +1,154 @@
+.footer {
+  background-color: var(--color-footer);
+  padding: 60px 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 60px 165px;
+
+    @media (min-width: $bp-tablet) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media (min-width: $bp-desktop) {
+      flex-wrap: nowrap;
+      gap: 60px 60px;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    color: var(--color-brand);
+    font-weight: 700;
+    font-size: 24px;
+    font-family: "Raleway";
+    margin-bottom: 20px;
+
+    &-accent {
+      color: var(--color-text-secondary);
+    }
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @media (min-width: $bp-desktop) {
+      text-align: left;
+      flex-grow: 1 1 0;
+    }
+  }
+
+  &__adress {
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &__email {
+    color: var(--color-icons);
+  }
+
+  &__phone-number {
+    color: var(--color-icons);
+  }
+
+  &__invite-block {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $bp-desktop) {
+      flex-direction: column;
+      text-align: left;
+    }
+  }
+
+  &__invite-text {
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  &__socials {
+    gap: 10px;
+  }
+
+  &__socials-link {
+    background: rgba(255, 255, 255, 0.1);
+
+    fill: var(--color-text-secondary);
+  }
+
+  &__form {
+    text-align: center;
+    width: 100%;
+
+    @media (min-width: $bp-desktop) {
+      flex-grow: 1;
+      max-width: 570px;
+    }
+  }
+
+  &__form-email-label {
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+    display: inline-block;
+
+    @media (min-width: $bp-tablet) {
+      display: inline-block;
+      max-width: 207px;
+    }
+
+    @media (min-width: $bp-desktop) {
+      text-align: left;
+      display: block;
+    }
+  }
+
+  &__form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+
+    @media (min-width: $bp-desktop) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__form-email-input {
+    width: 100%;
+    padding: 16px;
+    border-radius: 4px;
+    background-color: var(--color-footer);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    max-width: 450px;
+    color: var(--color-text-secondary);
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--color-text-secondary);
+    padding: 12px 30px;
+    fill: var(--color-text-secondary);
+    border-radius: 4px;
+  }
+}

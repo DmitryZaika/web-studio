@@ -1,0 +1,117 @@
+.header {
+  border-bottom: 1px solid var(--color-header-border);
+
+  &__container {
+    display: flex;
+    background-color: var(--color-secondary-text);
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    color: var(--color-brand);
+    font-size: 24px;
+    font-weight: 700;
+    font-family: "Raleway";
+
+    @media (min-width: $bp-desktop) {
+      font-size: 26px;
+    }
+
+    &-accent {
+      color: var(--color-main-text);
+    }
+  }
+  &__menu {
+    display: none;
+
+    @media (min-width: $bp-tablet) {
+      display: flex;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 50px;
+  }
+
+  &__link {
+    color: var(--color-main-text);
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.5s;
+    position: relative;
+    padding: 25px 0;
+    &:hover {
+      color: var(--color-brand);
+    }
+
+    &:hover:before {
+      transform: scaleX(1);
+      transition: transform 0.25s;
+      transform-origin: left;
+    }
+    &:before {
+      content: "";
+      width: 100%;
+      height: 4px;
+      background-color: var(--color-brand);
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      transform: scaleX(0);
+      transition: transform 0.25s;
+      transform-origin: right;
+    }
+
+    &--accent::after {
+      content: "";
+      width: 100%;
+      height: 4px;
+      background-color: var(--color-brand);
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      transform: scaleX(1);
+    }
+
+    &--accent {
+      color: var(--color-brand);
+    }
+  }
+
+  &__contacts {
+    display: none;
+
+    @media (min-width: $bp-tablet) {
+      display: flex;
+      gap: 10px 30px;
+      flex-direction: column;
+    }
+
+    @media (min-width: $bp-desktop) {
+      flex-direction: row;
+    }
+  }
+
+  &__contacts-link {
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    color: var(--color-background-dark);
+    transition: 0.25s;
+    &:hover {
+      color: var(--color-brand);
+      fill: var(--color-brand);
+    }
+  }
+
+  &__menu-icon {
+    border: none;
+    background-color: var(--color-secondary-text);
+    cursor: pointer;
+
+    @media (min-width: $bp-tablet) {
+      display: none;
+    }
+  }
+}
